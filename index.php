@@ -91,12 +91,12 @@ hN-                       om::sh+`
 			<div class="card--inner">
 				<div class="card--inner-bottom">
 					<h1 id="title">Jakob Trost</h1>
-					<h2 id="description">Web Developer @ <a href="https://greyd.de" target="_blank" rel="noopener noreferrer">GREYD</a></h2>
+					<h2 id="description">CTO @ <a href="https://greyd.de" target="_blank" rel="noopener noreferrer">Greyd</a></h2>
 				</div>
 				<div id="actions" class="card--inner-top">
 					<a href="mailto:hello@jakobtrost.de">hello@jakobtrost.de</a><br>
 					<a href="tel:+4915751061976">01575 1061976</a><br>
-					<a href="https://www.linkedin.com/in/jakob-trost-8aaa2914b/" target="_blank">LinkedIn</a><br>
+					<a href="https://www.linkedin.com/in/jakobtrost/" target="_blank">LinkedIn</a><br>
 				</div>
 				<div id="logo" class="card--inner-middle">
 					<svg
