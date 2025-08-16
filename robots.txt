@@ -1,0 +1,27 @@
+# ===================================
+# Generator: http://pixelfolk.net/tools/robots
+# Erstellt am: 27.10.2022, 01:31
+# Webseite: https://jakobtrost.de
+# ===================================
+
+Sitemap: http://sitemap.xml
+
+# ===================================
+# Folgende Seiten sollen nicht indexiert werden:
+# ===================================
+
+User-agent: *
+Disallow: /temp/
+
+# ===================================
+# Schließe folgende Spider komplett aus:
+# ===================================
+
+User-agent: WebReaper
+User-agent: WebCopier
+User-agent: Offline Explorer
+User-agent: HTTrack
+User-agent: Microsoft.URL.Control
+User-agent: EmailCollector
+User-agent: penthesilea
+Disallow: /
