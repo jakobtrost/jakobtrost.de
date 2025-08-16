@@ -61,12 +61,64 @@ document.addEventListener( "DOMContentLoaded", function () {
 	el.addEventListener( "click", addRipple );
 
 	/**
-	 * Colorscheme change
+	 * Colorscheme change with accessibility improvements
 	 */
 	document.querySelectorAll( 'input[name="colorscheme"]' ).forEach( radio => {
-		radio.addEventListener( 'click', function () {
+		radio.addEventListener( 'change', function () {
 			document.body.dataset.colorscheme = radio.value;
 			document.querySelector( 'meta[name="theme-color"]' ).setAttribute( "content", radio.dataset.color );
+			
+			// Announce color scheme change to screen readers
+			announceToScreenReader(`Color scheme changed to ${radio.value}`);
 		} );
+		
+		// Add keyboard navigation support
+		radio.addEventListener( 'keydown', function (e) {
+			if (e.key === 'Enter' || e.key === ' ') {
+				e.preventDefault();
+				radio.checked = true;
+				radio.dispatchEvent(new Event('change'));
+			}
+		});
 	} );
+
+	/**
+	 * Accessibility: Announce changes to screen readers
+	 */
+	function announceToScreenReader(message) {
+		// Create or get existing live region
+		let liveRegion = document.getElementById('live-region');
+		if (!liveRegion) {
+			liveRegion = document.createElement('div');
+			liveRegion.id = 'live-region';
+			liveRegion.setAttribute('aria-live', 'polite');
+			liveRegion.setAttribute('aria-atomic', 'true');
+			liveRegion.className = 'visually-hidden';
+			document.body.appendChild(liveRegion);
+		}
+		
+		// Announce the message
+		liveRegion.textContent = message;
+		
+		// Clear after a short delay
+		setTimeout(() => {
+			liveRegion.textContent = '';
+		}, 1000);
+	}
+
+	/**
+	 * Enhanced keyboard navigation for the card
+	 */
+	el.addEventListener('keydown', function(e) {
+		if (e.key === 'Enter' || e.key === ' ') {
+			e.preventDefault();
+			// Trigger click event for keyboard users
+			this.click();
+		}
+	});
+
+	// Make card focusable for keyboard users
+	el.setAttribute('tabindex', '0');
+	el.setAttribute('role', 'button');
+	el.setAttribute('aria-label', 'Interactive card - Click for a ripple effect');
 } );

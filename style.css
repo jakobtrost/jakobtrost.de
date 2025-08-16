@@ -28,6 +28,25 @@ svg {
 	max-width: 100%;
 }
 
+/**
+ * Accessibility - Skip Link
+ */
+.skip-link {
+	position: absolute;
+	top: -40px;
+	left: 6px;
+	background: #000;
+	color: #fff;
+	padding: 8px;
+	text-decoration: none;
+	z-index: 1000;
+	border-radius: 4px;
+	transition: top 0.3s;
+}
+
+.skip-link:focus {
+	top: 6px;
+}
 
 /**
  * Color schemes
@@ -459,6 +478,24 @@ input:focus-within + label::before {
 
 	.card {
 		transform: none !important;
+	}
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+	:root {
+		--bg: 0 0 0;
+		--bg2: 255 255 255;
+		--card: 255 255 255;
+		--font: 0 0 0;
+		--accent: 0 0 255;
+		--input-color: 0 0 0;
+	}
+	
+	.skip-link {
+		background: #000;
+		color: #fff;
+		border: 2px solid #fff;
 	}
 }
 
