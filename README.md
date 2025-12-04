@@ -19,7 +19,7 @@ Personal website for Jakob Trost, CTO @ GREYD.
 
 1. **Clone or download the repository**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/jakobtrost/jakobtrost.de
    cd jakobtrost.de
    ```
 
