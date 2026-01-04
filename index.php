@@ -46,11 +46,11 @@ $selected_colorscheme = array_values( $colorschemes )[ $numeric_keys[ $random_nu
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta property="og:title" content="Jakob Trost | Developer">
 	<meta property="og:type" content="website">
-	<meta property="og:description" content="Jakob Trost | Full Stack Developer">
+	<meta property="og:description" content="Jakob Trost | Web Developer">
 	<meta property="og:url" content="https://www.jakobtrost.de">
 	<meta property="og:image" content="https://www.jakobtrost.de/img/icon/apple-touch-icon.png">
 	<meta property="og:locale" content="en_US">
-	<meta name="description" content="Jakob Trost | Full Stack Developer">
+	<meta name="description" content="Jakob Trost | Web Developer">
 	<meta name="keywords" content="Full Stack Developer, Senior Developer, Web Developer, CTO, Greyd, GREYD, Software Engineer, Tech Lead">
 	<meta name="google-site-verification" content="5nxSxw0ciCHH565_tJ1WX2D7fykdyyheX7klyX-CvpE">
 	<meta name="author" content="Jakob Trost">
@@ -70,13 +70,13 @@ $selected_colorscheme = array_values( $colorschemes )[ $numeric_keys[ $random_nu
 		"@context": "https://schema.org",
 		"@type": "Person",
 		"name": "Jakob Trost",
-		"jobTitle": "Full Stack Developer",
+		"jobTitle": "Web Developer",
 		"worksFor": {
 			"@type": "Organization",
 			"name": "GREYD",
 			"url": "https://greyd.io"
 		},
-		"description": "Full Stack Developer",
+		"description": "Web Developer",
 		"email": "hello@jakobtrost.de",
 		"telephone": "+4915751061976",
 		"url": "https://www.jakobtrost.de",
@@ -120,7 +120,7 @@ hN-                       om::sh+`
 			<div class="card--inner">
 				<div class="card--inner-bottom">
 					<h1 id="title">Jakob Trost</h1>
-					<h2 id="description">Full Stack Developer</h2>
+					<h2 id="description">Web Developer</h2>
 				</div>
 				<div id="actions" class="card--inner-top" role="navigation" aria-label="Contact Information">
 					<a href="mailto:hello@jakobtrost.de" aria-label="Send email to hello@jakobtrost.de">hello@jakobtrost.de</a><br>

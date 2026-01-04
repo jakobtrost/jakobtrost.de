@@ -1,6 +1,6 @@
 # Jakob Trost Website
 
-Personal website for Jakob Trost, Full Stack Developer (former CTO @Greyd).
+Personal website for Jakob Trost, Web Developer (former CTO @Greyd).
 
 ## Features
 
