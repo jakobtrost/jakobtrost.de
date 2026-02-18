@@ -1,40 +1,3 @@
-<?php
-
-$colorschemes = array(
-	'dark' => array(
-		'slug'  => 'dark',
-		'title' => 'Dark Color Scheme',
-		'color' => '#4f52b4'
-	),
-	'vibrant' => array(
-		'slug'  => 'vibrant',
-		'title' => 'Vibrant Color Scheme',
-		'color' => '#f72585'
-	),
-	'orange' => array(
-		'slug'  => 'orange',
-		'title' => 'Orange Color Scheme',
-		'color' => '#f77f00'
-	),
-	'cyan' => array(
-		'slug'  => 'cyan',
-		'title' => 'Cyan Color Scheme',
-		'color' => '#2d00f7'
-	),
-	'aqua' => array(
-		'slug'  => 'aqua',
-		'title' => 'Aqua Color Scheme',
-		'color' => '#00a896'
-	),
-	// 'gray' => array(
-	// 	'slug'  => 'gray',
-	// 	'title' => 'Gray Color Scheme'
-	// )
-);
-$numeric_keys = array( 0, 0, 0, 1, 1, 3, 3, 4 );
-$random_number = rand( 0, count($numeric_keys) - 1 );
-$selected_colorscheme = array_values( $colorschemes )[ $numeric_keys[ $random_number ] ];
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,7 +5,7 @@ $selected_colorscheme = array_values( $colorschemes )[ $numeric_keys[ $random_nu
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Jakob Trost | Developer</title>
-	<meta name="theme-color" content="<?php echo $selected_colorscheme['color']; ?>">
+	<meta name="theme-color" content="#4f52b4">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta property="og:title" content="Jakob Trost | Developer">
 	<meta property="og:type" content="website">
@@ -59,7 +22,7 @@ $selected_colorscheme = array_values( $colorschemes )[ $numeric_keys[ $random_nu
 	<meta name="revisit-after" content="7 days">
 	<link rel="icon" type="image/png" href="img/favicon-32.png" sizes="32x32">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180png">
-	<meta name="msapplication-TileColor" content="<?php echo $selected_colorscheme['color']; ?>">
+	<meta name="msapplication-TileColor" content="#4f52b4">
 	<meta name="msapplication-TileImage" content="img/favicon-144.png">
 	<link rel="stylesheet" href="style.css?v=1.4">
 	<link rel="stylesheet" href="fonts/clash-display/css/clash-display.css">
@@ -110,9 +73,8 @@ $selected_colorscheme = array_values( $colorschemes )[ $numeric_keys[ $random_nu
 hN-                       om::sh+`      
 `/dy:                   /dMdyo-`        
    -ohy+:`          ./ydy+-`            
-      `:+syyyyyyyyy-->                  
-<body data-colorscheme="<?php echo $selected_colorscheme['slug']; ?>">
-	
+      `:+syyyyyyyyy-->                
+<body>
 	<main role="main" aria-labelledby="title">
 		<div class="card" role="region" aria-labelledby="title">
 			<div class="card--border" aria-hidden="true"></div>
@@ -147,21 +109,19 @@ hN-                       om::sh+`
 		</div>
 	</main>
 	
-	<!-- Color scheme selector with improved accessibility -->
+	<!-- Color scheme selector -->
 	<fieldset role="group" aria-labelledby="colorscheme-legend">
 		<legend id="colorscheme-legend" class="visually-hidden">Select Color Scheme</legend>
-		<?php
-		foreach ( $colorschemes as $colorscheme ) {
-			echo sprintf(
-				'<input type="radio" name="colorscheme" value="%1$s" id="%1$s" %3$s data-color="%4$s" aria-describedby="%1$s-desc">'.
-				'<label for="%1$s" aria-label="%2$s"><span class="visually-hidden">%2$s</span></label>',
-				$colorscheme[ 'slug' ],
-				$colorscheme[ 'title' ],
-				$colorscheme[ 'slug' ] === $selected_colorscheme['slug'] ? 'checked autofocus' : '',
-				$colorscheme[ 'color' ]
-			);
-		}
-		?>
+		<input type="radio" name="colorscheme" value="dark" id="dark" data-color="#4f52b4" aria-describedby="dark-desc">
+		<label for="dark" aria-label="Dark Color Scheme"><span class="visually-hidden">Dark Color Scheme</span></label>
+		<input type="radio" name="colorscheme" value="vibrant" id="vibrant" data-color="#f72585" aria-describedby="vibrant-desc">
+		<label for="vibrant" aria-label="Vibrant Color Scheme"><span class="visually-hidden">Vibrant Color Scheme</span></label>
+		<input type="radio" name="colorscheme" value="orange" id="orange" data-color="#f77f00" aria-describedby="orange-desc">
+		<label for="orange" aria-label="Orange Color Scheme"><span class="visually-hidden">Orange Color Scheme</span></label>
+		<input type="radio" name="colorscheme" value="cyan" id="cyan" data-color="#2d00f7" aria-describedby="cyan-desc">
+		<label for="cyan" aria-label="Cyan Color Scheme"><span class="visually-hidden">Cyan Color Scheme</span></label>
+		<input type="radio" name="colorscheme" value="aqua" id="aqua" data-color="#00a896" aria-describedby="aqua-desc">
+		<label for="aqua" aria-label="Aqua Color Scheme"><span class="visually-hidden">Aqua Color Scheme</span></label>
 	</fieldset>
 	
 	<script src="script.js?v=1.4"></script>
