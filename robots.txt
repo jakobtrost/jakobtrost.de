@@ -4,7 +4,7 @@
 # Webseite: https://jakobtrost.de
 # ===================================
 
-Sitemap: http://sitemap.xml
+Sitemap: https://jakobtrost.de/sitemap.xml
 
 # ===================================
 # Folgende Seiten sollen nicht indexiert werden:
